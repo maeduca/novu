@@ -112,6 +112,8 @@ services:
       timeout: 10s
       retries: 3
       start_period: 40s
+    networks:
+      - dokploy-network
 
   worker:
     image: "ghcr.io/novuhq/novu/worker:3.11.0"
@@ -165,6 +167,8 @@ services:
       timeout: 10s
       retries: 3
       start_period: 20s
+    networks:
+      - dokploy-network
 
   ws:
     image: "ghcr.io/novuhq/novu/ws:3.11.0"
@@ -234,6 +238,8 @@ services:
       timeout: 10s
       retries: 3
       start_period: 20s
+    networks:
+      - dokploy-network
 
 volumes:
   mongodb: ~
