@@ -164,7 +164,7 @@ services:
   ws:
     image: "ghcr.io/novuhq/novu/ws:3.11.0"
     depends_on:
-      mongodb:
+      novu-mongodb:
         condition: service_healthy
       redis:
         condition: service_healthy
