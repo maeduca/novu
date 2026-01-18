@@ -112,7 +112,7 @@ services:
   worker:
     image: "ghcr.io/novuhq/novu/worker:3.11.0"
     depends_on:
-      mongodb:
+      novu-mongodb:
         condition: service_healthy
       redis:
         condition: service_healthy
