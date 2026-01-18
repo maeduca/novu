@@ -14,6 +14,8 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+    networks:
+      - dokploy-network
 
   novu-mongodb:
     image: mongo:8.0.17
@@ -50,6 +52,8 @@ services:
       timeout: 5s
       retries: 5
       start_period: 20s
+    networks:
+      - dokploy-network
 
   api:
     image: "ghcr.io/novuhq/novu/api:3.11.0"
